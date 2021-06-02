@@ -10,7 +10,6 @@
 		CE62E3A72444BF0200CCF474 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62E3A62444BF0200CCF474 /* AppDelegate.swift */; };
 		CE62E3A92444BF0200CCF474 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62E3A82444BF0200CCF474 /* SceneDelegate.swift */; };
 		CE62E3AB2444BF0200CCF474 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62E3AA2444BF0200CCF474 /* SettingsViewController.swift */; };
-		CE62E3AE2444BF0200CCF474 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE62E3AC2444BF0200CCF474 /* Main.storyboard */; };
 		CE62E3B32444BF0400CCF474 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE62E3B12444BF0400CCF474 /* LaunchScreen.storyboard */; };
 		CE62E3BB2444BF6000CCF474 /* PlanetsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62E3BA2444BF6000CCF474 /* PlanetsCollectionViewController.swift */; };
 		CE62E3BD2444BFA300CCF474 /* PlanetCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE62E3BC2444BFA300CCF474 /* PlanetCollectionViewCell.swift */; };
@@ -25,7 +24,6 @@
 		CE62E3A62444BF0200CCF474 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE62E3A82444BF0200CCF474 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CE62E3AA2444BF0200CCF474 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		CE62E3AD2444BF0200CCF474 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE62E3B22444BF0400CCF474 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE62E3B42444BF0400CCF474 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE62E3BA2444BF6000CCF474 /* PlanetsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsCollectionViewController.swift; sourceTree = "<group>"; };
@@ -72,7 +70,6 @@
 				CE62E3C72444C09D00CCF474 /* Model Controllers */,
 				CE62E3C92444C0B300CCF474 /* View Controllers */,
 				CE62E3C82444C0AB00CCF474 /* Views */,
-				CE62E3AC2444BF0200CCF474 /* Main.storyboard */,
 				CE62E3CB2444C0F000CCF474 /* Assets.xcassets */,
 				CE62E3B12444BF0400CCF474 /* LaunchScreen.storyboard */,
 				CE62E3B42444BF0400CCF474 /* Info.plist */,
@@ -157,7 +154,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1140;
-				LastUpgradeCheck = 1140;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = "Lambda School";
 				TargetAttributes = {
 					CE62E3A22444BF0100CCF474 = {
@@ -190,7 +187,6 @@
 			files = (
 				CE62E3B32444BF0400CCF474 /* LaunchScreen.storyboard in Resources */,
 				CE62E3CC2444C0F000CCF474 /* Assets.xcassets in Resources */,
-				CE62E3AE2444BF0200CCF474 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,14 +211,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		CE62E3AC2444BF0200CCF474 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CE62E3AD2444BF0200CCF474 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CE62E3B12444BF0400CCF474 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -260,6 +248,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -320,6 +309,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -353,6 +343,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N3P8URX7UV;
 				INFOPLIST_FILE = CodePlanets/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -370,6 +361,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = N3P8URX7UV;
 				INFOPLIST_FILE = CodePlanets/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

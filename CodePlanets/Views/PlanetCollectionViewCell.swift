@@ -12,8 +12,8 @@ class PlanetCollectionViewCell: UICollectionViewCell {
     
     static let reuseIdentifier = "PlanetCell"
     
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
+    private var imageView = UIImageView()
+    private var nameLabel = UILabel()
     
     var planet: Planet? {
         didSet {
@@ -41,17 +41,69 @@ class PlanetCollectionViewCell: UICollectionViewCell {
     private func setUpSubviews() {
         // Image View
         // 1. Create/configure
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFit
         
         // 2. Add to view hierarchy
+        self.addSubview(imageView)
         
         // 3. Create/activate constraints
+        //For Y position
+        NSLayoutConstraint(item: imageView,
+                           attribute: .top,
+                           relatedBy: .equal,
+                           toItem: self,
+                           attribute: .top,
+                           multiplier: 1,
+                           constant: 4).isActive = true
+        //For X position
+        NSLayoutConstraint(item: imageView,
+                           attribute: .leading,
+                           relatedBy: .equal,
+                           toItem: self,
+                           attribute: .leading,
+                           multiplier: 1,
+                           constant: 4).isActive = true
+        //For Width
+        NSLayoutConstraint(item: imageView,
+                           attribute: .trailing,
+                           relatedBy: .equal,
+                           toItem: self,
+                           attribute: .trailing,
+                           multiplier: 1,
+                           constant: -4).isActive = true
+        
+        //For Height
+        NSLayoutConstraint(item: imageView,
+                           attribute: .height,
+                           relatedBy: .equal,
+                           toItem: imageView,
+                           attribute: .width,
+                           multiplier: 1,
+                           constant: 0).isActive = true
+        
+        
         
         // Label
         // 1. Create/configure
+        nameLabel.translatesAutoresizingMaskIntoConstraints = false
+        nameLabel.textAlignment = .center
         
         // 2. Add to view hierarchy
+        self.addSubview(nameLabel)
         
         // 3. Create/activate constraints
+        
+        //For Y position
+        nameLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 4).isActive = true
+        
+        //For X position
+        nameLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 4).isActive = true
+        
+        //For Width position
+        nameLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -2).isActive = true
+    
+        //For Height position is not needed because iis set base on the font type
         
     }
 }
